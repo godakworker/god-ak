@@ -1,6 +1,6 @@
 {
 	"title": "Socials",
-	"order": 2,
+	"order": 3,
 	"links": [
 		{
 			"title": "Twitter / X",
@@ -8,14 +8,16 @@
 			"icon": "/images/x.jpg"
 		},
 		{
-			"title": "Deviantart Page (1.7k)",
+			"title": "Deviantart Page",
 			"url": "https://footgodak.deviantart.com/",
-			"icon": "/images/deviantart.svg"
+			"icon": "/images/deviantart.svg",
+			"badge": "1.7k"
 		},
 		{
-			"title": "My Cult Server (1.5k)",
+			"title": "My Cult Server",
 			"url": "https://discord.gg/jC6ysg582z",
 			"icon": "/images/discord.svg",
+			"badge": "1.5k",
 			"description": "Discord Server • Free to join"
 		}
 	]

@@ -10,7 +10,11 @@ const sections = defineCollection({
 			z.object({
 				title: z.string(),
 				url: z.string().url(),
-				icon: z.string(),
+				// Optional: the "game" variant draws its own wheel icon.
+				icon: z.string().optional(),
+				variant: z.enum(["featured", "card", "game", "row"]).default("row"),
+				// Small pill shown next to/above the title (e.g. "preferred", "1.7k").
+				badge: z.string().optional(),
 				description: z.string().optional(),
 			}),
 		),

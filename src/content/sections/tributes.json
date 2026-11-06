@@ -3,19 +3,17 @@
 	"order": 1,
 	"links": [
 		{
-			"title": "Throne - preferred",
+			"title": "Throne",
 			"url": "https://throne.com/godak",
-			"icon": "/images/throne.jpg"
+			"icon": "/images/throne.jpg",
+			"variant": "featured",
+			"badge": "preferred"
 		},
 		{
 			"title": "YouPay",
 			"url": "https://youpay.me/godak",
-			"icon": "/images/youpay.jpg"
-		},
-		{
-			"title": "debt wheel",
-			"url": "https://spin.cashgodak.com",
-			"icon": "/images/debt-wheel.jpg"
+			"icon": "/images/youpay.jpg",
+			"variant": "card"
 		}
 	]
 }

@@ -1,0 +1,21 @@
+---
+const slices = Array.from({ length: 8 }, (_, i) => {
+	const pt = (deg: number) => {
+		const a = ((deg - 90) * Math.PI) / 180;
+		return `${(24 + 21 * Math.cos(a)).toFixed(2)} ${(24 + 21 * Math.sin(a)).toFixed(2)}`;
+	};
+	return { d: `M24 24 L${pt(i * 45)} A21 21 0 0 1 ${pt((i + 1) * 45)} Z`, fill: i % 2 ? "#7A5214" : "#F2B33D" };
+});
+---
+
+<span class="wheel-icon">
+	<svg class="wheel" width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">
+		<circle cx="24" cy="24" r="22" fill="#1A1206" stroke="#F2B33D" stroke-width="2"></circle>
+		{slices.map((s) => <path d={s.d} fill={s.fill} />)}
+		<circle cx="24" cy="24" r="6.5" fill="#1A1206" stroke="#F2B33D" stroke-width="1.5"></circle>
+		<text x="24" y="27" text-anchor="middle" font-weight="800" font-size="8" fill="#F2B33D">$</text>
+	</svg>
+	<svg class="pointer" width="12" height="10" viewBox="0 0 12 10" aria-hidden="true">
+		<path d="M1 1 H11 L6 9 Z" fill="#F6EEDC" stroke="#1A1206" stroke-width="1.2" stroke-linejoin="round"></path>
+	</svg>
+</span>

@@ -1,0 +1,23 @@
+---
+interface Props {
+	/** Number of rays around the circle. */
+	count?: number;
+	/** Alternate short/long rays (the hero burst) instead of uniform ones. */
+	alternate?: boolean;
+	class?: string;
+}
+
+const { count = 16, alternate = false, class: className } = Astro.props;
+const rays = Array.from({ length: count }, (_, i) => {
+	const a = (i * 2 * Math.PI) / count;
+	const outer = alternate && i % 2 ? 126 : 150;
+	const p = (r: number) => [(160 + r * Math.cos(a)).toFixed(1), (160 + r * Math.sin(a)).toFixed(1)];
+	const [x1, y1] = p(96);
+	const [x2, y2] = p(outer);
+	return { x1, y1, x2, y2 };
+});
+---
+
+<svg class={className} viewBox="0 0 320 320" aria-hidden="true">
+	{rays.map((r) => <line {...r} />)}
+</svg>
