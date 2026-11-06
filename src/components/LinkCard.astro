@@ -28,10 +28,10 @@ const { title, url, icon, variant = "row", badge, description } = Astro.props;
 	</span>
 	{
 		variant === "row" ? (
-			<ArrowIcon class="go" size={20} />
+			<ArrowIcon class="go" size={17} />
 		) : (
 			<span class="go circle">
-				<ArrowIcon size={variant === "featured" ? 22 : 20} />
+				<ArrowIcon size={variant === "featured" ? 18 : 16} />
 			</span>
 		)
 	}
