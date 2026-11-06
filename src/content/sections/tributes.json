@@ -1,0 +1,21 @@
+{
+	"title": "Tributes",
+	"order": 1,
+	"links": [
+		{
+			"title": "Throne - preferred",
+			"url": "https://throne.com/godak",
+			"icon": "/images/throne.jpg"
+		},
+		{
+			"title": "YouPay",
+			"url": "https://youpay.me/godak",
+			"icon": "/images/youpay.jpg"
+		},
+		{
+			"title": "debt wheel",
+			"url": "https://spin.cashgodak.com",
+			"icon": "/images/debt-wheel.jpg"
+		}
+	]
+}

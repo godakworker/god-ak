@@ -1,0 +1,22 @@
+{
+	"title": "Socials",
+	"order": 2,
+	"links": [
+		{
+			"title": "Twitter / X",
+			"url": "https://x.com/cashGodAk",
+			"icon": "/images/x.jpg"
+		},
+		{
+			"title": "Deviantart Page (1.7k)",
+			"url": "https://footgodak.deviantart.com/",
+			"icon": "/images/deviantart.svg"
+		},
+		{
+			"title": "My Cult Server (1.5k)",
+			"url": "https://discord.gg/jC6ysg582z",
+			"icon": "/images/discord.svg",
+			"description": "Discord Server • Free to join"
+		}
+	]
+}
