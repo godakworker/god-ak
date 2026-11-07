@@ -5,7 +5,8 @@
 		{
 			"title": "Twitter / X",
 			"url": "https://x.com/cashGodAk",
-			"icon": "/images/x.jpg"
+			"icon": "/images/x.jpg",
+			"badge": "1k"
 		},
 		{
 			"title": "Deviantart Page",
@@ -17,7 +18,7 @@
 			"title": "My Cult Server",
 			"url": "https://discord.gg/jC6ysg582z",
 			"icon": "/images/discord.svg",
-			"badge": "1.5k",
+			"badge": "1.6k",
 			"description": "Discord Server • Free to join"
 		}
 	]
