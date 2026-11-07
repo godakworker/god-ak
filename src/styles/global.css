@@ -28,14 +28,19 @@ main {
 		radial-gradient(ellipse 80% 420px at 50% 0, rgba(242, 179, 61, 0.22), transparent 70%),
 		var(--bg);
 }
-/* Backdrop photo behind the top of the page: drop the file at public/images/backdrop.jpg */
-main::before {
-	content: "";
+/* Backdrop: solid light blue with randomly scattered sun emojis */
+.sky {
 	position: absolute;
 	inset: 0 0 auto;
 	height: 960px;
-	background: url("/images/backdrop.jpg") center 28% / cover no-repeat;
+	overflow: hidden;
+	background: #6dacd2;
 	pointer-events: none;
+}
+.sky span {
+	position: absolute;
+	line-height: 1;
+	transform: translate(-50%, -50%);
 }
 main::after {
 	content: "";

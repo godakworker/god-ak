@@ -7,6 +7,17 @@ import "../styles/global.css";
 const sections = (await getCollection("sections")).sort((a, b) => a.data.order - b.data.order);
 const caption =
 	"Your arrogant God & findom with perfect feet, sweaty socks & too much god complex ☀️";
+
+// Seeded PRNG so the sun field looks random but is stable between builds
+let seed = 7;
+const rand = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+const cols = 9;
+const rows = 8;
+const suns = Array.from({ length: cols * rows }, (_, i) => ({
+	x: (((i % cols) + rand()) / cols) * 100,
+	y: ((Math.floor(i / cols) + rand()) / rows) * 100,
+	size: Math.round(18 + rand() ** 1.5 * 52),
+})).filter(() => rand() > 0.12);
 ---
 
 <!doctype html>
@@ -26,6 +37,13 @@ const caption =
 	</head>
 	<body>
 		<main>
+			<div class="sky" aria-hidden="true">
+				{
+					suns.map((s) => (
+						<span style={`left:${s.x.toFixed(1)}%;top:${s.y.toFixed(1)}%;font-size:${s.size}px`}>☀️</span>
+					))
+				}
+			</div>
 			<div class="page">
 				<header>
 					<div class="avatar">
